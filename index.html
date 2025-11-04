@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seatwork 2 Fermocil</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #902222;
+        }
+
+        h1 {
+            color: #902222;
+            text-align: center;
+        }
+
+        h3 {
+            color: #971e1e;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #902222;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input {
+            width: 70%;
+            padding: 10px;
+            margin: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #971e1e;
+            border-radius: 5px;
+        }
+
+        p {
+            color: #f0f0f0;
+            background-color: #902222;
+            padding: 5px;
+            margin-right: 5px;
+            min-width: 80px;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .grade-input-columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .column input {
+            width: 100%;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .column p {
+            width: 80px;
+            margin-right: 5px;
+        }
+
+        .name-input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .name-input-group input {
+            flex-grow: 1;
+            width: auto;
+        }
+        .results {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Student Grade Calculator</h1>
+    <py-script type= "py" src= "main.py"></py-script>
+    
+    <div class="name-input-group">
+        <p>First Name:</p>
+        <input type="text" id="firstNameInput" placeholder="Joshua">
+    </div>
+    <div class="name-input-group">
+        <p>Last Name:</p>
+        <input type="text" id="lastNameInput" placeholder="Ortiz">
+    </div>
+    
+    <h3>Enter Your Grades:</h3>
+    
+    <div class="grade-input-columns">
+        <div class="column">
+            <div class="input-group"><p>Science:</p><input type="number" id="science" placeholder="90"></div>
+            <div class="input-group"><p>English:</p><input type="number" id="english" placeholder="88"></div>
+            <div class="input-group"><p>ICT:</p><input type="number" id="ict" placeholder="85"></div>
+        </div>
+        <div class="column">
+            <div class="input-group"><p>Math:</p><input type="number" id="math" placeholder="92"></div>
+            <div class="input-group"><p>Filipino:</p><input type="number" id="filipino" placeholder="87"></div>
+            <div class="input-group"><p>PE:</p><input type="number" id="pe" placeholder="95"></div>
+        </div>
+    </div>
+    
+    <button py-click="compute_grade">Calculate Average</button><br>
+    
+    <div class="container p-4" id="results">
+        <h3>Results:</h3>
+        
+        <div id="show1" class="h4 mt-3"></div>
+        <div id="output1" class="mb-2"></div>
+        <div id="output2" class="mb-2"></div>
+        <div id="output3" class="mb-2"></div>
+        <div id="output4" class="mb-2"></div>
+        <div id="output5" class="mb-2"></div>
+        <div id="output6" class="mb-2"></div>
+        <div id="output7" class="mb-2"></div>
+
+        <div id="show2" class="h4 mt-3"></div>
+        <div id="average" class="h4 mt-3"></div>
+        <div id="show" class="h4 mt-3"></div>
+    </div>
+</div>
+
+</body>
+</html>
